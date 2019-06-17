@@ -1,6 +1,11 @@
 # CondominioSD
 Repositório de um projeto de Complexo de Condomínios para a disciplina de Sistemas Distribuídos.
 
+Alunos: Guilherme Sampaio Sapiencia, 
+	Jônatas da Silva Oliveira, 
+	Rodrigo Nakamuta Izawa, 
+	Romário Fernando Castro Azevedo Magalhães
+
 Neste trabalho utilizamos de Cliente-servidor para simular um sistema distribuído.
 A fim rodar o programa, dividimos o código em 5 diferentes scripts. 
 3 deles representando andar, prédio e campus(scripts executáveis).
