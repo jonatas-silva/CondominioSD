@@ -9,6 +9,8 @@ Romário Fernando Castro Azevedo Magalhães
 Neste trabalho utilizamos arquitetura Cliente-servidor para simular um sistema distribuído. A fim rodar o programa, dividimos o código em 6 diferentes scripts executáveis. 3 deles representam, condomínio (gerenciador.py), prédio (server_predio.py) e andar (server_andar.py). 
 Temos também o script constCS.py que precisa estar na mesma pasta dos outros scripts uma vez que este script não executável é importado dentro dos outros scripts executáveis, pois, contém as bibliotecas, endereços IPs e portas, todos necessários para os outros scripts executáveis.
 
+Linguagem: Python 2.7
+
 OBS¹: Os IP’s publicos do gerenciador (GERENCIADOR_PUBLICO) e de todos os prédios (PREDIO_PUBLICO, PREDIO2_PUBLICO) e etc, precisam ser alterados antes da execução do programa! [somente se os servidores ainda não estiverem rodando na AWS, pois caso esteja o arquivo já estará atualizado com o IP público dos servidores no arquivo constCS.py	
 
  Cliente (client_app.py) : é o script cliente que gera as instâncias de pessoas dos tipos: visitante, funcionário do condomínio e funcionário de empresa. Enviando-os ao gerenciador.py que por sua vez envia-os à seus respectivos prédios utilizando de endereços públicos ou privados na AWS, assim como processando-os quanto a disponibilidade de vagas no condomínio.
