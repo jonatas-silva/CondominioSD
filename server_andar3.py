@@ -2,8 +2,8 @@ from constCS import *
 
 # SERVIDOR DO PREDIO
 context = zmq.Context()
-# p = "tcp://"+ HOST +":"+ PORT3 # how and where to connect
-p = "tcp://"+ ANDAR_PRIVADO +":"+ PORT3 # how and where to connect
+# p = "tcp://"+ HOST +":"+ PORT7 # how and where to connect
+p = "tcp://"+ ANDAR3_PRIVADO +":"+ PORT3 # how and where to connect
 s  = context.socket(zmq.REP)    # create reply socket
 s.bind(p)                      # bind socket to address
 
@@ -14,7 +14,7 @@ s2  = context.socket(zmq.REQ)    # create reply socket
 s2.connect(p2)                # block until connected
 
 andar1_MAX = 15 # 15 quantidade maximo de pessoas dentro do andar
-identificador_andar = {1 : "andar 1", 2 : "Andar 1", 3 : "andar1"} # identificadores do andar
+identificador_andar = {1 : "andar 3", 2 : "Andar 3", 3 : "andar3"} # identificadores do andar
 frequentadores = ["visitante", "funcionario do condominio", "funcionario de empresa"] # lista
 # temporizador = 1
 
@@ -61,6 +61,7 @@ while True:
   # caso a messagem seja "existe vaga?" e tenha vaga no andar
   if message[1] == "existe vaga?" and len(lista_atual) < andar1_MAX:
     dic = {1 : "existe_vaga"}
+    # print "oi"
     s.send(str(dic)) # retorna um dic com [1] "existe_vaga", dizendo que existe vaga no andar
     continue
   elif message[1] == "existe vaga?" and len(lista_atual) >= andar1_MAX:
